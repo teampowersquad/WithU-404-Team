@@ -1,43 +1,29 @@
-<!DOCTYPE html>  
-<html lang="en">  
-    <head>  
-        <meta charset="utf-8" />  
-        <title>Title</title>  
-        <!-- styles -->  
-    </head>  
-    <body>  
-        <div id="container">  
-            <header role="banner">  
-                <h1>  
-                    <a href="/">joel sutherland</a>  
-                </h1>  
-            </header>  
-            <nav>  
-                <ul>  
-                    <!-- nav items -->  
-                </ul>  
-            </nav>  
-            <div id="blog" class="hidden"><-- blog dropdown -->  
-            </div>  
-            <!-- blog -->  
-            <article>  
-                <header>  
-                    <h1>  
-                        <a href="">Post Title</a>  
-                    </h1>  
-                    <div class="postmeta">  
-                        <time datetime="">December 31st, 1969</time>  
-                        <a href="y#comments" class="comments">0 Comments</a>  
-                    </div>  
-                </header>  
-                <!-- content -->  
-                <aside class="comments" id="comments">  
-                    <!-- comments -->  
-                </aside>  
-                <!-- comments -->  
-            </article>  
-        </div>  
-        <!-- container -->  
-        <!-- scripts -->  
-    </body>  
-</html>
+<div class="comment">
+    <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="write a comment......"></textarea>
+    <input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
+    </div>
+    <div id="display"></div>
+    <script type="text/javascript">
+    var titles = [];
+    var titleInput = document.getElementById("title");
+    var messageBox = document.getElementById("display");
+    function Allow()
+    {
+    if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+    {
+    user.title.value="";
+    alert("Please Enter only alphabets");
+    }
+    window.location.reload()
+    }
+    function insert () {
+    titles.push(titleInput.value);
+    clearAndShow();
+    }
+    function clearAndShow ()
+    {
+    titleInput.value = "";
+    messageBox.innerHTML = "";
+    messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+    }
+    </script>
