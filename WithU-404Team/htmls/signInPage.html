@@ -2,14 +2,20 @@
 <html>
     <head>
         <title>WithU Sign In</title>
+        <script defer src="validationSignIn.js"></script>
     </head>
     <body>
         <p>We are glad you are back again. Please, provide your information below:</p>
-        <form>
-            <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username"><br>
-            <label for="pwd">Password:</label><br>
-            <input type="password" id="pwd" name="pwd">
+        <div id="error"></div>
+        <form id="form" action="/" method="GET">
+            <div>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required><br>
+            </div>
+            <div>
+                <label for="pwd">Password:</label><br>
+                <input type="password" id="pwd" name="pwd">
+            </div>
             <input type="submit" value="Submit">
         </form>
     </body>
