@@ -1,12 +1,21 @@
   
 <!DOCTYPE html>
 <html>
+  <head>
+    <script>
+      function passValues(){
+        var nickname=document.getElementById("nickname").value;
+        localStorage.setItem("textvalue", nickname);
+        return false
+      }
+    </script>
+  </head>
   <body>
     <title>WithU Sign Up</title>
     <h1>Sign Up</h1>
     <p>As a new member in our community, please provide the following information</p>
 
-    <form >
+    <form action="profile.html">
       Nickname: <input type = "text" name = "nickname" />
       <br>
       Password: <input type = "password" name = "password" />
@@ -29,6 +38,6 @@
         <button type="submit">Submit</button>
       </a>
     </form>
-    
+
   </body>
 </html>
