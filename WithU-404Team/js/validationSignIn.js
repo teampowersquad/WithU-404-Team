@@ -17,7 +17,7 @@ form.addEventListener('submit',(e) => {
         messages.push('Password must be less than 20 characters')
     }
 
-    if(password.value === 'password'){
+    if(password.value === 'pwd'){
         messages.push('Password cannot be password')
     }
 
