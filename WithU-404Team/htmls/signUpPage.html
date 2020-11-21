@@ -1,25 +1,34 @@
   
 <!DOCTYPE html>
 <html>
-<body>
+  <body>
+    <title>WithU Sign Up</title>
+    <h1>Sign Up</h1>
+    <p>As a new member in our community, please provide the following information</p>
 
-<h1>Select one of the choices from bellow</h1>
+    <form >
+      Nickname: <input type = "text" name = "nickname" />
+      <br>
+      Password: <input type = "password" name = "password" />
+   </form>
 
-<p>Please, kindly select the type of problem that you are delaing with: </p>
+    <h2>Select one of the choices from below</h2>
 
-<form action="/action_page.php">
-  <label for="cars">Type of problem:</label>
-  <select name="cars" id="cars">
-    <option value="school">School</option>
-    <option value="Finances">Finances</option>
-    <option value="Health">Health</option>
-    <option value="Social">Social</option>
-  </select>
-  <br><br>
-  <input type="submit" value="Submit">
-</form>
+    <p>Please, kindly select the type of problem that you are dealing or are willing to help with: </p>
 
-<p>Click the "Submit" button".</p>
-
-</body>
+    <form action="/action_page.php">
+      <label for="cars">Type of problem:</label>
+      <select name="cars" id="cars">
+        <option value="school">School</option>
+        <option value="Finances">Finances</option>
+        <option value="Health">Health</option>
+        <option value="Social">Social</option>
+      </select>
+      <br><br>
+      <a href = "profile.html">
+        <button type="submit">Submit</button>
+      </a>
+    </form>
+    
+  </body>
 </html>
